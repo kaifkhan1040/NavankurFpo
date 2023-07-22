@@ -1,0 +1,1047 @@
+[
+{
+ "model": "contenttypes.contenttype",
+ "pk": 1,
+ "fields": {
+  "app_label": "admin",
+  "model": "logentry"
+ }
+},
+{
+ "model": "contenttypes.contenttype",
+ "pk": 2,
+ "fields": {
+  "app_label": "auth",
+  "model": "permission"
+ }
+},
+{
+ "model": "contenttypes.contenttype",
+ "pk": 3,
+ "fields": {
+  "app_label": "auth",
+  "model": "group"
+ }
+},
+{
+ "model": "contenttypes.contenttype",
+ "pk": 4,
+ "fields": {
+  "app_label": "contenttypes",
+  "model": "contenttype"
+ }
+},
+{
+ "model": "contenttypes.contenttype",
+ "pk": 5,
+ "fields": {
+  "app_label": "sessions",
+  "model": "session"
+ }
+},
+{
+ "model": "contenttypes.contenttype",
+ "pk": 6,
+ "fields": {
+  "app_label": "app",
+  "model": "fpo"
+ }
+},
+{
+ "model": "contenttypes.contenttype",
+ "pk": 7,
+ "fields": {
+  "app_label": "app",
+  "model": "farmer"
+ }
+},
+{
+ "model": "contenttypes.contenttype",
+ "pk": 8,
+ "fields": {
+  "app_label": "app",
+  "model": "state"
+ }
+},
+{
+ "model": "contenttypes.contenttype",
+ "pk": 9,
+ "fields": {
+  "app_label": "app",
+  "model": "district"
+ }
+},
+{
+ "model": "contenttypes.contenttype",
+ "pk": 10,
+ "fields": {
+  "app_label": "app",
+  "model": "city"
+ }
+},
+{
+ "model": "contenttypes.contenttype",
+ "pk": 11,
+ "fields": {
+  "app_label": "users",
+  "model": "customuser"
+ }
+},
+{
+ "model": "contenttypes.contenttype",
+ "pk": 12,
+ "fields": {
+  "app_label": "users",
+  "model": "forgetpassmailverify"
+ }
+},
+{
+ "model": "sessions.session",
+ "pk": "0pq2by7qet0sefn8didosabsuybo1uoy",
+ "fields": {
+  "session_data": "NDJkZjY4MmY1YTM1MDIwY2U1YTMzM2NlOWVlMmNhODgyZDgyYWRhZjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJkNTgzNTBlYTYzZDU4YjljOGRkYWE3NWIyZjIyNjM5NzI1N2E3MzMyIn0=",
+  "expire_date": "2022-05-31T11:06:41.402Z"
+ }
+},
+{
+ "model": "sessions.session",
+ "pk": "cnmxg11kqih58vesofyuj3zh3p0q66qq",
+ "fields": {
+  "session_data": "NDJkZjY4MmY1YTM1MDIwY2U1YTMzM2NlOWVlMmNhODgyZDgyYWRhZjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJkNTgzNTBlYTYzZDU4YjljOGRkYWE3NWIyZjIyNjM5NzI1N2E3MzMyIn0=",
+  "expire_date": "2022-06-16T06:24:50.741Z"
+ }
+},
+{
+ "model": "app.state",
+ "pk": 1,
+ "fields": {
+  "state_title": "up",
+  "state_description": "utter",
+  "status": "Active"
+ }
+},
+{
+ "model": "app.district",
+ "pk": 1,
+ "fields": {
+  "district_title": "Anantnag",
+  "state": 1,
+  "district_description": "",
+  "district_status": "Active"
+ }
+},
+{
+ "model": "app.city",
+ "pk": 1,
+ "fields": {
+  "name": "Kupwara",
+  "district": 1,
+  "state": 1,
+  "description": "",
+  "status": "Active"
+ }
+},
+{
+ "model": "app.farmer",
+ "pk": 1,
+ "fields": {
+  "fpo_name": 1,
+  "si_no_of_share_holder": "asd",
+  "share_holder_name": "adasd",
+  "state": 1,
+  "district": 1,
+  "block": 1,
+  "gram_panchayat": "asd",
+  "fpo_registration_no": "",
+  "farmer_name": "asd",
+  "fig_name": "asd",
+  "village": "ads",
+  "pg_name": "asd",
+  "hamlet": "asd",
+  "hh_name": "asd",
+  "father_and_husband_name": "asd",
+  "gender": "F",
+  "age": "12",
+  "category": "asd",
+  "member_of_fig": null,
+  "name_of_the_fig": "asd",
+  "bpl_status": false,
+  "have_you_received_aadhar_card_consent": false,
+  "aadhar_card_no": "af",
+  "bank_account_no": "asd",
+  "number_of_family_member": "123",
+  "annual_income": "13",
+  "livestock_income": "123",
+  "labour": "asd",
+  "ntfp": "asd",
+  "micro_enterprise": "ads",
+  "other_income": "123",
+  "member_of_cooperative_agriculture_societies": false,
+  "total_land": "sdf",
+  "land_record_details": "sdfs",
+  "upland_irrigated": "df",
+  "medium_upland_irrigated": "sdf",
+  "low_land_irrigated": "sdf",
+  "leased_land": false,
+  "leased_land_area": "sdf",
+  "year_of_share_issued": "2022-05-30",
+  "generate_share_certificate_number": false,
+  "distinctive_total_number_of_share": "1312",
+  "total_capital_amount_deposited": "243",
+  "nominee": "dfdds",
+  "relationship_with_nominee": "sdf",
+  "address_of_the_nominee": "sdf",
+  "ivrs_or_other_alerts": false,
+  "mobile_number": "1231231231",
+  "dob_of_farmer": "2022-05-30",
+  "social_category": "asd",
+  "kharif_crop": "asd",
+  "sowing_month": "asd",
+  "marketing_month": "asd",
+  "robi_crop": "asd",
+  "zayed_crop": "as",
+  "names_of_agri_machinery_owner": "asd",
+  "name_of_market": "asd",
+  "Livestock_activity": false,
+  "byp_number": "123",
+  "shed_type": "as",
+  "vaccine_interval": "asd",
+  "tagging_status": false,
+  "pig_number": "123",
+  "cow_number": "2",
+  "buffalo_number": "2",
+  "face_value_of_share": "234",
+  "mambers_hip_amount_paid": "123",
+  "premium_amount_paid": "234",
+  "any_entrepreneural_activity": "asd",
+  "packhouse_available": "asd",
+  "drying_yard_available": "asd",
+  "other_livelihood": "asd",
+  "poly_or_shed_house": "asd",
+  "any_commerical_vehicle": "sad",
+  "onwed_vehicle": "asd",
+  "house_type": "asd",
+  "aadhar_attached": false,
+  "pan_attached": false,
+  "bank_details_attached": false,
+  "land_records_attached": false,
+  "delete_status": true
+ }
+},
+{
+ "model": "app.farmer",
+ "pk": 2,
+ "fields": {
+  "fpo_name": 1,
+  "si_no_of_share_holder": "asd",
+  "share_holder_name": "asd",
+  "state": 1,
+  "district": 1,
+  "block": 1,
+  "gram_panchayat": "asd",
+  "fpo_registration_no": "sfd",
+  "farmer_name": "asd",
+  "fig_name": "asd",
+  "village": "dsa",
+  "pg_name": "asd",
+  "hamlet": "ads",
+  "hh_name": "ads",
+  "father_and_husband_name": "asd",
+  "gender": "F",
+  "age": "12",
+  "category": "asd",
+  "member_of_fig": null,
+  "name_of_the_fig": "123",
+  "bpl_status": false,
+  "have_you_received_aadhar_card_consent": false,
+  "aadhar_card_no": "1231231231",
+  "bank_account_no": "asd",
+  "number_of_family_member": "234",
+  "annual_income": "234",
+  "livestock_income": "234",
+  "labour": "asd",
+  "ntfp": "asd",
+  "micro_enterprise": "asd",
+  "other_income": "234",
+  "member_of_cooperative_agriculture_societies": false,
+  "total_land": "234",
+  "land_record_details": "asd",
+  "upland_irrigated": "asd",
+  "medium_upland_irrigated": "dsa",
+  "low_land_irrigated": "asd",
+  "leased_land": false,
+  "leased_land_area": "asd",
+  "year_of_share_issued": "2022-05-31",
+  "generate_share_certificate_number": false,
+  "distinctive_total_number_of_share": "133",
+  "total_capital_amount_deposited": "123",
+  "nominee": "asd",
+  "relationship_with_nominee": "ds",
+  "address_of_the_nominee": "asd",
+  "ivrs_or_other_alerts": false,
+  "mobile_number": "1231231231",
+  "dob_of_farmer": "2022-05-31",
+  "social_category": "asd",
+  "kharif_crop": "asd",
+  "sowing_month": "asd",
+  "marketing_month": "asd",
+  "robi_crop": "asd",
+  "zayed_crop": "asd",
+  "names_of_agri_machinery_owner": "ads",
+  "name_of_market": "asd",
+  "Livestock_activity": false,
+  "byp_number": "234",
+  "shed_type": "sad",
+  "vaccine_interval": "asd",
+  "tagging_status": false,
+  "pig_number": "12312",
+  "cow_number": "123",
+  "buffalo_number": "1",
+  "face_value_of_share": "23",
+  "mambers_hip_amount_paid": "234",
+  "premium_amount_paid": "234",
+  "any_entrepreneural_activity": "sdf",
+  "packhouse_available": "sdf",
+  "drying_yard_available": "sdf",
+  "other_livelihood": "sdf",
+  "poly_or_shed_house": "asd",
+  "any_commerical_vehicle": "asd",
+  "onwed_vehicle": "asd",
+  "house_type": "ads",
+  "aadhar_attached": false,
+  "pan_attached": false,
+  "bank_details_attached": false,
+  "land_records_attached": false,
+  "delete_status": true
+ }
+},
+{
+ "model": "app.farmer",
+ "pk": 3,
+ "fields": {
+  "fpo_name": 1,
+  "si_no_of_share_holder": "asd",
+  "share_holder_name": "asd",
+  "state": 1,
+  "district": 1,
+  "block": 1,
+  "gram_panchayat": "asd",
+  "fpo_registration_no": "sfd",
+  "farmer_name": "asd",
+  "fig_name": "asd",
+  "village": "dsa",
+  "pg_name": "asd",
+  "hamlet": "ads",
+  "hh_name": "ads",
+  "father_and_husband_name": "asd",
+  "gender": "F",
+  "age": "12",
+  "category": "asd",
+  "member_of_fig": null,
+  "name_of_the_fig": "123",
+  "bpl_status": false,
+  "have_you_received_aadhar_card_consent": false,
+  "aadhar_card_no": "1231231231",
+  "bank_account_no": "asd",
+  "number_of_family_member": "234",
+  "annual_income": "234",
+  "livestock_income": "234",
+  "labour": "asd",
+  "ntfp": "asd",
+  "micro_enterprise": "asd",
+  "other_income": "234",
+  "member_of_cooperative_agriculture_societies": false,
+  "total_land": "234",
+  "land_record_details": "asd",
+  "upland_irrigated": "asd",
+  "medium_upland_irrigated": "dsa",
+  "low_land_irrigated": "asd",
+  "leased_land": false,
+  "leased_land_area": "asd",
+  "year_of_share_issued": "2022-05-31",
+  "generate_share_certificate_number": false,
+  "distinctive_total_number_of_share": "133",
+  "total_capital_amount_deposited": "123",
+  "nominee": "asd",
+  "relationship_with_nominee": "ds",
+  "address_of_the_nominee": "asd",
+  "ivrs_or_other_alerts": false,
+  "mobile_number": "1231231231",
+  "dob_of_farmer": "2022-05-31",
+  "social_category": "asd",
+  "kharif_crop": "asd",
+  "sowing_month": "asd",
+  "marketing_month": "asd",
+  "robi_crop": "asd",
+  "zayed_crop": "asd",
+  "names_of_agri_machinery_owner": "ads",
+  "name_of_market": "asd",
+  "Livestock_activity": false,
+  "byp_number": "234",
+  "shed_type": "sad",
+  "vaccine_interval": "asd",
+  "tagging_status": false,
+  "pig_number": "12312",
+  "cow_number": "123",
+  "buffalo_number": "1",
+  "face_value_of_share": "23",
+  "mambers_hip_amount_paid": "234",
+  "premium_amount_paid": "234",
+  "any_entrepreneural_activity": "sdf",
+  "packhouse_available": "sdf",
+  "drying_yard_available": "sdf",
+  "other_livelihood": "sdf",
+  "poly_or_shed_house": "asd",
+  "any_commerical_vehicle": "asd",
+  "onwed_vehicle": "asd",
+  "house_type": "ads",
+  "aadhar_attached": false,
+  "pan_attached": false,
+  "bank_details_attached": false,
+  "land_records_attached": false,
+  "delete_status": true
+ }
+},
+{
+ "model": "app.farmer",
+ "pk": 4,
+ "fields": {
+  "fpo_name": 1,
+  "si_no_of_share_holder": "zxcasd",
+  "share_holder_name": "zxc",
+  "state": 1,
+  "district": 1,
+  "block": 1,
+  "gram_panchayat": "asd",
+  "fpo_registration_no": "sfd",
+  "farmer_name": "zxc",
+  "fig_name": "zxc",
+  "village": "zcx",
+  "pg_name": "zxc",
+  "hamlet": "xcz",
+  "hh_name": "zxc",
+  "father_and_husband_name": "zxc",
+  "gender": "M",
+  "age": "234",
+  "category": "zxc",
+  "member_of_fig": null,
+  "name_of_the_fig": "asd",
+  "bpl_status": false,
+  "have_you_received_aadhar_card_consent": false,
+  "aadhar_card_no": "2342342342",
+  "bank_account_no": "12342342",
+  "number_of_family_member": "234",
+  "annual_income": "234",
+  "livestock_income": "234",
+  "labour": "sdf",
+  "ntfp": "sdf",
+  "micro_enterprise": "sdf",
+  "other_income": "423",
+  "member_of_cooperative_agriculture_societies": false,
+  "total_land": "sdf",
+  "land_record_details": "sdfsdf",
+  "upland_irrigated": "sdf",
+  "medium_upland_irrigated": "sfd",
+  "low_land_irrigated": "sdf",
+  "leased_land": false,
+  "leased_land_area": "sdf",
+  "year_of_share_issued": "2022-05-31",
+  "generate_share_certificate_number": false,
+  "distinctive_total_number_of_share": "4324",
+  "total_capital_amount_deposited": "4345",
+  "nominee": "dfdsf",
+  "relationship_with_nominee": "sdf",
+  "address_of_the_nominee": "sdf",
+  "ivrs_or_other_alerts": false,
+  "mobile_number": "1232123123",
+  "dob_of_farmer": "2022-05-31",
+  "social_category": "asd",
+  "kharif_crop": "asd",
+  "sowing_month": "ad",
+  "marketing_month": "asd",
+  "robi_crop": "asdasd",
+  "zayed_crop": "asd",
+  "names_of_agri_machinery_owner": "dsf",
+  "name_of_market": "sdf",
+  "Livestock_activity": false,
+  "byp_number": "324",
+  "shed_type": "sdf",
+  "vaccine_interval": "sdf",
+  "tagging_status": false,
+  "pig_number": "1",
+  "cow_number": "3",
+  "buffalo_number": "3",
+  "face_value_of_share": "4553",
+  "mambers_hip_amount_paid": "25",
+  "premium_amount_paid": "3453",
+  "any_entrepreneural_activity": "sfdf",
+  "packhouse_available": "sdf",
+  "drying_yard_available": "sdf",
+  "other_livelihood": "sdf",
+  "poly_or_shed_house": "zxc",
+  "any_commerical_vehicle": "asda",
+  "onwed_vehicle": "sd",
+  "house_type": "zxc",
+  "aadhar_attached": false,
+  "pan_attached": false,
+  "bank_details_attached": false,
+  "land_records_attached": false,
+  "delete_status": true
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 1,
+ "fields": {
+  "name": "Can add log entry",
+  "content_type": 1,
+  "codename": "add_logentry"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 2,
+ "fields": {
+  "name": "Can change log entry",
+  "content_type": 1,
+  "codename": "change_logentry"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 3,
+ "fields": {
+  "name": "Can delete log entry",
+  "content_type": 1,
+  "codename": "delete_logentry"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 4,
+ "fields": {
+  "name": "Can view log entry",
+  "content_type": 1,
+  "codename": "view_logentry"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 5,
+ "fields": {
+  "name": "Can add permission",
+  "content_type": 2,
+  "codename": "add_permission"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 6,
+ "fields": {
+  "name": "Can change permission",
+  "content_type": 2,
+  "codename": "change_permission"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 7,
+ "fields": {
+  "name": "Can delete permission",
+  "content_type": 2,
+  "codename": "delete_permission"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 8,
+ "fields": {
+  "name": "Can view permission",
+  "content_type": 2,
+  "codename": "view_permission"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 9,
+ "fields": {
+  "name": "Can add group",
+  "content_type": 3,
+  "codename": "add_group"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 10,
+ "fields": {
+  "name": "Can change group",
+  "content_type": 3,
+  "codename": "change_group"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 11,
+ "fields": {
+  "name": "Can delete group",
+  "content_type": 3,
+  "codename": "delete_group"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 12,
+ "fields": {
+  "name": "Can view group",
+  "content_type": 3,
+  "codename": "view_group"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 13,
+ "fields": {
+  "name": "Can add content type",
+  "content_type": 4,
+  "codename": "add_contenttype"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 14,
+ "fields": {
+  "name": "Can change content type",
+  "content_type": 4,
+  "codename": "change_contenttype"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 15,
+ "fields": {
+  "name": "Can delete content type",
+  "content_type": 4,
+  "codename": "delete_contenttype"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 16,
+ "fields": {
+  "name": "Can view content type",
+  "content_type": 4,
+  "codename": "view_contenttype"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 17,
+ "fields": {
+  "name": "Can add session",
+  "content_type": 5,
+  "codename": "add_session"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 18,
+ "fields": {
+  "name": "Can change session",
+  "content_type": 5,
+  "codename": "change_session"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 19,
+ "fields": {
+  "name": "Can delete session",
+  "content_type": 5,
+  "codename": "delete_session"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 20,
+ "fields": {
+  "name": "Can view session",
+  "content_type": 5,
+  "codename": "view_session"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 21,
+ "fields": {
+  "name": "Can add fpo",
+  "content_type": 6,
+  "codename": "add_fpo"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 22,
+ "fields": {
+  "name": "Can change fpo",
+  "content_type": 6,
+  "codename": "change_fpo"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 23,
+ "fields": {
+  "name": "Can delete fpo",
+  "content_type": 6,
+  "codename": "delete_fpo"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 24,
+ "fields": {
+  "name": "Can view fpo",
+  "content_type": 6,
+  "codename": "view_fpo"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 25,
+ "fields": {
+  "name": "Can add farmer",
+  "content_type": 7,
+  "codename": "add_farmer"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 26,
+ "fields": {
+  "name": "Can change farmer",
+  "content_type": 7,
+  "codename": "change_farmer"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 27,
+ "fields": {
+  "name": "Can delete farmer",
+  "content_type": 7,
+  "codename": "delete_farmer"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 28,
+ "fields": {
+  "name": "Can view farmer",
+  "content_type": 7,
+  "codename": "view_farmer"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 29,
+ "fields": {
+  "name": "Can add state",
+  "content_type": 8,
+  "codename": "add_state"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 30,
+ "fields": {
+  "name": "Can change state",
+  "content_type": 8,
+  "codename": "change_state"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 31,
+ "fields": {
+  "name": "Can delete state",
+  "content_type": 8,
+  "codename": "delete_state"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 32,
+ "fields": {
+  "name": "Can view state",
+  "content_type": 8,
+  "codename": "view_state"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 33,
+ "fields": {
+  "name": "Can add district",
+  "content_type": 9,
+  "codename": "add_district"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 34,
+ "fields": {
+  "name": "Can change district",
+  "content_type": 9,
+  "codename": "change_district"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 35,
+ "fields": {
+  "name": "Can delete district",
+  "content_type": 9,
+  "codename": "delete_district"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 36,
+ "fields": {
+  "name": "Can view district",
+  "content_type": 9,
+  "codename": "view_district"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 37,
+ "fields": {
+  "name": "Can add city",
+  "content_type": 10,
+  "codename": "add_city"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 38,
+ "fields": {
+  "name": "Can change city",
+  "content_type": 10,
+  "codename": "change_city"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 39,
+ "fields": {
+  "name": "Can delete city",
+  "content_type": 10,
+  "codename": "delete_city"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 40,
+ "fields": {
+  "name": "Can view city",
+  "content_type": 10,
+  "codename": "view_city"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 41,
+ "fields": {
+  "name": "Can add user",
+  "content_type": 11,
+  "codename": "add_customuser"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 42,
+ "fields": {
+  "name": "Can change user",
+  "content_type": 11,
+  "codename": "change_customuser"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 43,
+ "fields": {
+  "name": "Can delete user",
+  "content_type": 11,
+  "codename": "delete_customuser"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 44,
+ "fields": {
+  "name": "Can view user",
+  "content_type": 11,
+  "codename": "view_customuser"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 45,
+ "fields": {
+  "name": "Can add forget pass mail verify",
+  "content_type": 12,
+  "codename": "add_forgetpassmailverify"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 46,
+ "fields": {
+  "name": "Can change forget pass mail verify",
+  "content_type": 12,
+  "codename": "change_forgetpassmailverify"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 47,
+ "fields": {
+  "name": "Can delete forget pass mail verify",
+  "content_type": 12,
+  "codename": "delete_forgetpassmailverify"
+ }
+},
+{
+ "model": "auth.permission",
+ "pk": 48,
+ "fields": {
+  "name": "Can view forget pass mail verify",
+  "content_type": 12,
+  "codename": "view_forgetpassmailverify"
+ }
+},
+{
+ "model": "users.customuser",
+ "pk": 1,
+ "fields": {
+  "password": "pbkdf2_sha256$180000$T2hjRbrbs4cj$cYXovHAVRJBPhZCqwrSfE62CX/408e6mhW/CqLX7mRQ=",
+  "last_login": "2022-06-02T06:24:50.731Z",
+  "is_superuser": true,
+  "first_name": "",
+  "last_name": "",
+  "is_staff": true,
+  "is_active": true,
+  "date_joined": "2022-05-17T11:06:25.940Z",
+  "email": "kaif@admin.com",
+  "zoom": "",
+  "role": "superadmin",
+  "delete_status": true,
+  "image": "",
+  "groups": [],
+  "user_permissions": []
+ }
+},
+{
+ "model": "users.customuser",
+ "pk": 2,
+ "fields": {
+  "password": "pbkdf2_sha256$180000$woEOOY3Aps56$/8z4n04GdWEyUJ4kmLGU+DkaNIjpa6TPMsSo7K0jKFc=",
+  "last_login": "2022-06-01T10:46:58.807Z",
+  "is_superuser": false,
+  "first_name": "fpo",
+  "last_name": "",
+  "is_staff": false,
+  "is_active": true,
+  "date_joined": "2022-05-27T06:43:18.368Z",
+  "email": "fpo@admin.com",
+  "zoom": "",
+  "role": "admin",
+  "delete_status": true,
+  "image": "",
+  "groups": [],
+  "user_permissions": []
+ }
+},
+{
+ "model": "app.fpo",
+ "pk": 1,
+ "fields": {
+  "user_id": 2,
+  "created_by": "kaif@admin.com",
+  "status": true,
+  "company_name": "sdf",
+  "implementing_agency": "as",
+  "state_category": "asd",
+  "state": 1,
+  "district": 1,
+  "block": 1,
+  "full_address": "asd",
+  "fpo_registration_no": "sfd",
+  "date_of_incorporation": "2022-05-27",
+  "no_of_bods": "2",
+  "pan_card_no": "3334234234",
+  "pan_docs": false,
+  "tan_no": "132",
+  "tan_docs": false,
+  "gst_no": "234234",
+  "cin_no": "234",
+  "authorise_share_capital": "234",
+  "issued_shared_capital": "234",
+  "mca_docs": false,
+  "bank_name": "sdf",
+  "branch_name": "sdf",
+  "ifsc_code": "24",
+  "bank_account": "asdf",
+  "account_holder_name": "sdf",
+  "bank_docs": false,
+  "authorise_signatory_in_bank": "sdf",
+  "mobile_no_registered_with_email": "1231231231",
+  "mobile_number": "1231231231",
+  "email_created_by": "asda@ga.com",
+  "company_moa": false,
+  "company_aoa": "sdf",
+  "fpo_registration_remarks": "sdf",
+  "villages_covered_under_fpo": "234",
+  "dmc_approval_status": false,
+  "special_allocation": "asd",
+  "primary_crop_approved_by_dmc_or_as_per_dpr": "ads",
+  "secondary_crop_approved_by_dmc_or_as_per_dpr": "asd",
+  "status_of_baseline_survey": false,
+  "status_board_meamber_identification": false,
+  "is_woman_centric": false,
+  "fpo_formed": false,
+  "registration_act": "asd",
+  "fpo_office_village_name": "sdf",
+  "fpo_office_post_office": "sdf",
+  "pin_code": "123",
+  "fpo_udyog_aadhaar": "1221",
+  "status_of_ca_appointing": false,
+  "name_of_ca": "asd",
+  "mobile_no_of_ca": "3453455433",
+  "email_id_of_ca": "asd@gmail.com",
+  "status_ceo_appointment": "asd",
+  "fpo_ceo_name": "asd",
+  "fpo_ceo_mobile_number": "1231231231",
+  "fpo_ceo_email_id": "asd@gmail.com",
+  "status_accountant_appointment": false,
+  "fpo_accountant_name": "asd",
+  "fpo_accountant_mobile_number": "2222222222",
+  "fpo_accountant_email_id": "asd@asd.com",
+  "no_of_farmer_mobilized": "234",
+  "no_of_share_member": "234",
+  "total_equity_amount": "224524",
+  "register_on_enam": false,
+  "name_of_mandi": "sdf",
+  "first_general_board_meetings": "2022-05-27",
+  "no_of_board_meetings": "4",
+  "dates_of_board_meeting": "2022-05-27",
+  "obtained_commencement_end_of_bussiness_certificate": "2022-05-27",
+  "additional_services_proposed_by_fpo": "sdf",
+  "bussiness_plan": false,
+  "bussiness_transation_details": "asd",
+  "bussiness_transation_ammount_details": "asd",
+  "fig_creation_remarks": "sdf"
+ }
+}
+]

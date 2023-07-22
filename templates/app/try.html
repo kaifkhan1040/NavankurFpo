@@ -1,0 +1,11 @@
+<!--<form action="/action_page.php">-->
+<!--  <label for="myfile">Select files:</label>-->
+<!--  <input type="file" id="myfile" name="myfile" multiple><br><br>-->
+<!--  <input type="submit">-->
+<!--</form>-->
+{% load static %}
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+{{form}}
+<!-- <input type="file" multiple accept=".png,.jpg,.pdf" id="myFile" name="filename">-->
+<input type="submit" value="Submit">
+  </form>

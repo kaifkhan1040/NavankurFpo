@@ -1,0 +1,778 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block style %}
+
+<link rel="stylesheet" type="text/css" href="/{% static 'app-assets/vendors/css/forms/select/select2.min.css' %}">
+<link rel="stylesheet" type="text/css"
+      href="/{% static 'app-assets/vendors/css/pickers/flatpickr/flatpickr.min.css' %}">
+<link rel="stylesheet" type="text/css" href="/{% static 'app-assets/css/plugins/forms/form-validation.css' %}">
+<link rel="stylesheet" type="text/css" href="/{% static 'app-assets/css/plugins/forms/pickers/form-flat-pickr.css' %}">
+{% endblock style %}
+<!-- BEGIN: Content-->
+{% block content %}
+
+<!-- BEGIN: Content-->
+<!--    <div class="app-content content ">-->
+<!--        <div class="content-overlay"></div>-->
+<!--        <div class="header-navbar-shadow"></div>-->
+<!--        <div class="content-wrapper container-xxl p-0">-->
+<!--            <div class="content-header row">-->
+<!--                <div class="content-header-left col-md-9 col-12 mb-2">-->
+<!--                    <div class="row breadcrumbs-top">-->
+<!--                        <div class="col-12">-->
+<!--                            <h2 class="content-header-title float-left mb-0">FPO Registration</h2>-->
+
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="content-header-right text-md-right col-md-3 col-12 d-md-block d-none">-->
+<!--                    <div class="form-group breadcrumb-right">-->
+<!--                        <div class="dropdown">-->
+<!--                            <button class="btn-icon btn btn-primary btn-round btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i data-feather="grid"></i></button>-->
+<!--                            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="app-todo.html"><i class="mr-1" data-feather="check-square"></i><span class="align-middle">Todo</span></a><a class="dropdown-item" href="app-chat.html"><i class="mr-1" data-feather="message-square"></i><span class="align-middle">Chat</span></a><a class="dropdown-item" href="app-email.html"><i class="mr-1" data-feather="mail"></i><span class="align-middle">Email</span></a><a class="dropdown-item" href="app-calendar.html"><i class="mr-1" data-feather="calendar"></i><span class="align-middle">Calendar</span></a></div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="content-body">-->
+<!--                &lt;!&ndash; Validation &ndash;&gt;-->
+<!--                <section class="bs-validation">-->
+<!--                    <div class="row">-->
+<!--                        &lt;!&ndash; Bootstrap Validation &ndash;&gt;-->
+<!--                        <div class="col-md-12 col-12">-->
+
+<!--                            <div class="card">-->
+<!--                                <div class="card-header">-->
+<!--                                    <h4 class="card-title">Basic Details</h4>-->
+<!--                                </div>-->
+<!--                                <div class="card-body">-->
+<!--                                    <form class="needs-validation" id="myForm" novalidate method="post" action="/admin/createfpo/">-->
+
+<!--                                            <div class="row">-->
+<!--                                                <div class="col-md-4">-->
+<!--                                                    <div class="form-group">-->
+<!--                                                        <label class="form-label" for="basic-addon-name">Name</label>-->
+<!--                                                            {{form.first_name}}-->
+<!--&lt;!&ndash;                                                        <input type="text" id="basic-addon-name" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="basic-addon-name" required />&ndash;&gt;-->
+<!--                                                        <div class="valid-feedback">Looks good!</div>-->
+<!--                                                        <div class="invalid-feedback">Please enter your name.</div>-->
+<!--                                                    </div>-->
+
+<!--                                                </div>-->
+<!--                                                <div class="col-md-4">-->
+<!--                                                    <div class="form-group">-->
+<!--                                                        <label class="form-label" for="basic-default-email1">Email</label>-->
+<!--&lt;!&ndash;                                                        <input type="email" id="basic-default-email1" class="form-control" placeholder="john.doe@email.com" aria-label="john.doe@email.com" required />&ndash;&gt;-->
+<!--                                                        {{form.email}}-->
+<!--                                                        <div class="valid-feedback">Looks good!</div>-->
+<!--                                                        <div class="invalid-feedback">Please enter a valid email</div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="col-md-4">-->
+<!--                                                    <div class="form-group">-->
+<!--&lt;!&ndash;                                                        <label class="form-label" for="basic-addon-name">Name</label>&ndash;&gt;-->
+<!--                                                            {{form2.company_name.label}}-->
+<!--                                                            {{form2.company_name}}-->
+<!--&lt;!&ndash;                                                        <input type="text" id="basic-addon-name" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="basic-addon-name" required />&ndash;&gt;-->
+<!--                                                        <div class="valid-feedback">Looks good!</div>-->
+<!--                                                        <div class="invalid-feedback">Please enter your name.</div>-->
+<!--                                                    </div>-->
+
+<!--                                                </div>-->
+
+<!--                                            </div>-->
+
+<!--                                        <div class="row">-->
+
+<!--                                                <div class="col-md-4">-->
+<!--                                                    <div class="form-group">-->
+<!--&lt;!&ndash;                                                        <label class="form-label" for="basic-default-email1">Email</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                        <input type="email" id="basic-default-email1" class="form-control" placeholder="john.doe@email.com" aria-label="john.doe@email.com" required />&ndash;&gt;-->
+<!--                                                        {{form2.implementing_agency.label}}-->
+<!--                                                        {{form2.implementing_agency}}-->
+<!--                                                        <div class="valid-feedback">Looks good!</div>-->
+<!--                                                        <div class="invalid-feedback">Please enter a implementing agency</div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="col-md-4">-->
+<!--                                                    <div class="form-group">-->
+<!--&lt;!&ndash;                                                        <label class="form-label" for="basic-default-password1">Password</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                        <input type="password" id="basic-default-password1" class="form-control" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" required />&ndash;&gt;-->
+<!--                                                            {% load widget_tweaks %}-->
+<!--                                                            {{form.password1.label}}-->
+<!--                                                            {% render_field form.password1 class+="form-control" %}-->
+
+<!--                                                        <div class="valid-feedback">Looks good!</div>-->
+<!--                                                        <div class="invalid-feedback">Please enter your password.</div>-->
+<!--                                                    </div>-->
+
+<!--                                                </div>-->
+<!--                                                <div class="col-md-4">-->
+<!--                                                    <div class="form-group">-->
+<!--                                                        {{form.password2.label}}:-->
+
+<!--                                                            {% render_field form.password2 class+="form-control" %}-->
+<!--                                                        <div class="valid-feedback">Looks good!</div>-->
+<!--                                                        <div class="invalid-feedback">Please enter a password</div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+
+<!--                                            </div>-->
+<!--&lt;!&ndash;                                        start address details&ndash;&gt;-->
+<!--                                        <div>-->
+<!--                                            <h3>Address Details</h3>-->
+<!--                                        </div>-->
+<!--                                        <div class="row">-->
+<!--                                                <div class="col-md-4">-->
+<!--                                                    <div class="form-group">-->
+<!--&lt;!&ndash;                                                        <label class="form-label" for="basic-default-email1">Email</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                        <input type="email" id="basic-default-email1" class="form-control" placeholder="john.doe@email.com" aria-label="john.doe@email.com" required />&ndash;&gt;-->
+<!--                                                        {{form2.state_category.label}}-->
+<!--                                                        {{form2.state_category}}-->
+<!--                                                        <div class="valid-feedback">Looks good!</div>-->
+<!--                                                        <div class="invalid-feedback">Please enter a state category e.g: hilly</div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="col-md-4">-->
+<!--                                                    <div class="form-group">-->
+<!--&lt;!&ndash;                                                        <label class="form-label" for="basic-default-email1">Email</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                        <input type="email" id="basic-default-email1" class="form-control" placeholder="john.doe@email.com" aria-label="john.doe@email.com" required />&ndash;&gt;-->
+<!--                                                        {{form2.state.label}}-->
+<!--                                                        {{form2.state}}-->
+<!--                                                        <div class="valid-feedback">Looks good!</div>-->
+<!--                                                        <div class="invalid-feedback">Please enter a state category e.g: hilly</div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="col-md-4">-->
+<!--                                                    <div class="form-group">-->
+<!--&lt;!&ndash;                                                        <label class="form-label" for="basic-default-email1">Email</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                        <input type="email" id="basic-default-email1" class="form-control" placeholder="john.doe@email.com" aria-label="john.doe@email.com" required />&ndash;&gt;-->
+<!--                                                        {{form2.district.label}}-->
+<!--                                                        {{form2.district}}-->
+<!--                                                        <div class="valid-feedback">Looks good!</div>-->
+<!--                                                        <div class="invalid-feedback">Please enter a state category e.g: hilly</div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                        </div>-->
+<!--                                        <div class="row">-->
+<!--                                                <div class="col-md-4">-->
+<!--                                                    <div class="form-group">-->
+<!--&lt;!&ndash;                                                        <label class="form-label" for="basic-default-email1">Email</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                        <input type="email" id="basic-default-email1" class="form-control" placeholder="john.doe@email.com" aria-label="john.doe@email.com" required />&ndash;&gt;-->
+<!--                                                        {{form2.block.label}}-->
+<!--                                                        {{form2.block}}-->
+<!--                                                        <div class="valid-feedback">Looks good!</div>-->
+<!--                                                        <div class="invalid-feedback">Please enter a state category e.g: hilly</div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="col-md-4">-->
+<!--                                                    <div class="form-group">-->
+<!--&lt;!&ndash;                                                        <label class="form-label" for="basic-default-email1">Email</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                        <input type="email" id="basic-default-email1" class="form-control" placeholder="john.doe@email.com" aria-label="john.doe@email.com" required />&ndash;&gt;-->
+<!--                                                        {{form2.full_address.label}}-->
+<!--                                                        {{form2.full_address}}-->
+<!--                                                        <div class="valid-feedback">Looks good!</div>-->
+<!--                                                        <div class="invalid-feedback">Please enter a state category e.g: hilly</div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+
+<!--                                        </div>-->
+
+
+<!--                                        <div class="row">-->
+<!--                                            <div class="col-12">-->
+<!--                                                <button type="submit" class="btn btn-primary add_fpo">Submit</button>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </form>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        </div>-->
+<!--                </section>-->
+<!--                &lt;!&ndash; /Validation &ndash;&gt;-->
+
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="sidenav-overlay"></div>-->
+<!--    <div class="drag-target"></div>-->
+
+
+<!--js validation-->
+<!-- BEGIN: Content-->
+<div class="app-content content ">
+    <div class="content-overlay"></div>
+    <div class="header-navbar-shadow"></div>
+    <div class="content-wrapper container-xxl p-0">
+        <div class="content-header row">
+            <div class="content-header-left col-md-9 col-12 mb-2">
+                <div class="row breadcrumbs-top">
+                    <div class="col-12">
+                        <h2 class="content-header-title float-left mb-0 " id="change_heading">View FPO</h2>
+                        <div class="breadcrumb-wrapper">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="{% url 'app:home' %}">Home</a>
+                                </li>
+                                <li class="breadcrumb-item">Forms
+                                </li>
+                                <li class="breadcrumb-item active" id="change_list">FPO
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-header-right text-md-right col-md-3 col-12 d-md-block d-none">
+                <div class="form-group breadcrumb-right">
+                    <!--                        <div class="dropdown">-->
+                    <!--                            <button class="btn-icon btn btn-primary btn-round btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i data-feather="grid"></i></button>-->
+                    <!--                            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="app-todo.html"><i class="mr-1" data-feather="check-square"></i><span class="align-middle">Todo</span></a><a class="dropdown-item" href="app-chat.html"><i class="mr-1" data-feather="message-square"></i><span class="align-middle">Chat</span></a><a class="dropdown-item" href="app-email.html"><i class="mr-1" data-feather="mail"></i><span class="align-middle">Email</span></a><a class="dropdown-item" href="app-calendar.html"><i class="mr-1" data-feather="calendar"></i><span class="align-middle">Calendar</span></a></div>-->
+                    <!--                        </div>-->
+                </div>
+            </div>
+        </div>
+        <div class="content-body">
+            <!-- Validation -->
+            <section class="bs-validation">
+                <div class="row">
+                    <div class="col-md-12 col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Basic Details</h4>
+                                <button class="btn btn-sm btn-primary edit_fpo ">Edit FPO</button>
+                            </div>
+                            <div class="card-body">
+                                <form id="jquery-val-form" class='edit-fpo' method="post">{% csrf_token %}
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <!--                                            <label class="form-label" for="basic-default-name">Name</label>-->
+                                                <!--                                            <input type="text" class="form-control" id="basic-default-name" name="basic-default-name" placeholder="John Doe" />-->
+                                                {{form.first_name.label}}
+                                                {{form.first_name}}
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="form-label" for="basic-default-email1">Email</label>
+                                                <!--                                                        <input type="email" id="basic-default-email1" class="form-control" placeholder="john.doe@email.com" aria-label="john.doe@email.com" required />-->
+                                                {{form.email}}
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+
+                                            <div class="form-group">
+                                                <!--                                                        <label class="form-label" for="basic-addon-name">Name</label>-->
+
+                                                {{form2.mobile_number.label}}
+                                                {{form2.mobile_number}}
+                                                <!--                                                        <input type="text" id="basic-addon-name" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="basic-addon-name" required />-->
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            {{form2.implementing_agency.label}}
+                                            {{form2.implementing_agency}}
+                                        </div>
+                                        <!--                                            <div class="col-md-4">-->
+
+                                        <!--                                                            {% load widget_tweaks %}-->
+                                        <!--                                                            {{form.password1.label}}-->
+                                        <!--                                                            {% render_field form.password1 class+="form-control" minlength="8" %}-->
+                                        <!--                                            </div>-->
+                                        <!--                                            <div class="col-md-4">-->
+                                        <!--                                                {{form.password2.label}}-->
+                                        <!--                                                            {% render_field form.password2 class+="form-control" minlength="8" %}-->
+                                        <!--                                            </div>-->
+<!--                                    </div>-->
+                                    </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+
+                                            </div>
+                                            <div class="col-md-4">
+
+
+                                            </div>
+                                            <div class="col-md-4">
+
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h3>Address Details</h3>
+                                            <hr>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form2.state_category.label}}
+                                                {{form2.state_category}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.state.label}}
+                                                {{form2.state}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.district.label}}
+                                                {{form2.district}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form2.block.label}}
+                                                {{form2.block}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.full_address.label}}
+                                                {{form2.full_address}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.pin_code.label}}
+                                                {{form2.pin_code}}
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h3>Documents</h3>
+                                            <hr>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form2.no_of_bods.label}}
+                                                {{form2.no_of_bods}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.pan_card_no.label}}
+                                                {{form2.pan_card_no}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.pan_docs.label}}
+                                                {{form2.pan_docs}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form2.tan_no.label}}
+                                                {{form2.tan_no}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.tan_docs.label}}
+                                                {{form2.tan_docs}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.gst_no.label}}
+                                                {{form2.gst_no}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form2.authorise_share_capital.label}}
+                                                {{form2.authorise_share_capital}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.issued_shared_capital.label}}
+                                                {{form2.issued_shared_capital}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.mca_docs.label}}
+                                                {{form2.mca_docs}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form2.cin_no.label}}
+                                                {{form2.cin_no}}
+                                            </div>
+                                            <!--                                            <div class="col-md-4">-->
+                                            <!--                                                {{form2.issued_shared_capital.label}}-->
+                                            <!--                                                {{form2.issued_shared_capital}}-->
+                                            <!--                                            </div>-->
+                                            <!--                                            <div class="col-md-4">-->
+                                            <!--                                                {{form2.mca_docs.label}}-->
+                                            <!--                                                {{form2.mca_docs}}-->
+                                            <!--                                            </div>-->
+                                        </div>
+                                        <div>
+                                            <h3>Bank Details</h3>
+                                            <hr>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form2.bank_name.label}}
+                                                {{form2.bank_name}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.branch_name.label}}
+                                                {{form2.branch_name}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.ifsc_code.label}}
+                                                {{form2.ifsc_code}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form2.bank_account.label}}
+                                                {{form2.bank_account}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.account_holder_name.label}}
+                                                {{form2.account_holder_name}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.bank_docs.label}}
+                                                {{form2.bank_docs}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form2.authorise_signatory_in_bank.label}}
+                                                {{form2.authorise_signatory_in_bank}}
+                                            </div>
+                                            <div class="col-md-4">
+
+                                            </div>
+                                            <div class="col-md-4">
+
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h3>Company Details</h3>
+                                            <hr>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form2.company_name.label}}
+                                                {{form2.company_name}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.company_moa.label}}
+                                                {{form2.company_moa}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.company_aoa.label}}
+                                                {{form2.company_aoa}}
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h3>FPO Information</h3>
+                                            <hr>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form2.fpo_registration_no.label}}
+                                                {{form2.fpo_registration_no}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.villages_covered_under_fpo.label}}
+                                                {{form2.villages_covered_under_fpo}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.fpo_registration_remarks.label}}
+                                                {{form2.fpo_registration_remarks}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form2.fpo_formed.label}}
+                                                {{form2.fpo_formed}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.fpo_office_village_name.label}}
+                                                {{form2.fpo_office_village_name}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.fpo_office_post_office.label}}
+                                                {{form2.fpo_office_post_office}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form2.fpo_udyog_aadhaar.label}}
+                                                {{form2.fpo_udyog_aadhaar}}
+                                            </div>
+                                            <div class="col-md-4">
+
+                                            </div>
+                                            <div class="col-md-4">
+
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <h3>CA Information</h3>
+                                            <hr>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form2.status_of_ca_appointing.label}}
+                                                {{form2.status_of_ca_appointing}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.name_of_ca.label}}
+                                                {{form2.name_of_ca}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.mobile_no_of_ca.label}}
+                                                {{form2.mobile_no_of_ca}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form2.email_id_of_ca.label}}
+                                                {{form2.email_id_of_ca}}
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <h3>CEO Information</h3>
+                                            <hr>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form2.status_ceo_appointment.label}}
+                                                {{form2.status_ceo_appointment}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.fpo_ceo_name.label}}
+                                                {{form2.fpo_ceo_name}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.fpo_ceo_mobile_number.label}}
+                                                {{form2.fpo_ceo_mobile_number}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form2.fpo_ceo_email_id.label}}
+                                                {{form2.fpo_ceo_email_id}}
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <h3>FPO Accountant</h3>
+                                            <hr>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form2.status_accountant_appointment.label}}
+                                                {{form2.status_accountant_appointment}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.fpo_accountant_name.label}}
+                                                {{form2.fpo_accountant_name}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.fpo_accountant_mobile_number.label}}
+                                                {{form2.fpo_accountant_mobile_number}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form2.fpo_accountant_email_id.label}}
+                                                {{form2.fpo_accountant_email_id}}
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <h3>Meetings Details</h3>
+                                            <hr>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form2.no_of_board_meetings.label}}
+                                                {{form2.no_of_board_meetings}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.dates_of_board_meeting.label}}
+                                                {{form2.dates_of_board_meeting}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.first_general_board_meetings.label}}
+                                                {{form2.first_general_board_meetings}}
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <h3>Business Details</h3>
+                                            <hr>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form2.obtained_commencement_end_of_bussiness_certificate.label}}
+                                                {{form2.obtained_commencement_end_of_bussiness_certificate}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.bussiness_plan.label}}
+                                                {{form2.bussiness_plan}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.bussiness_transation_details.label}}
+                                                {{form2.bussiness_transation_details}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form2.bussiness_transation_details.label}}
+                                                {{form2.bussiness_transation_details}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.bussiness_transation_ammount_details.label}}
+                                                {{form2.bussiness_transation_ammount_details}}
+                                            </div>
+                                            <!--                                            <div class="col-md-4">-->
+                                            <!--                                                {{form2.bussiness_transation_details.label}}-->
+                                            <!--                                                {{form2.bussiness_transation_details}}-->
+                                            <!--                                            </div>-->
+                                        </div>
+
+
+                                        <div>
+                                            <h3>Others Details</h3>
+                                            <hr>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form2.mobile_no_registered_with_email.label}}
+                                                {{form2.mobile_no_registered_with_email}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.email_created_by.label}}
+                                                {{form2.email_created_by}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.dmc_approval_status.label}}
+                                                {{form2.dmc_approval_status}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form2.special_allocation.label}}
+                                                {{form2.special_allocation}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.primary_crop_approved_by_dmc_or_as_per_dpr.label}}
+                                                {{form2.primary_crop_approved_by_dmc_or_as_per_dpr}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.secondary_crop_approved_by_dmc_or_as_per_dpr.label}}
+                                                {{form2.secondary_crop_approved_by_dmc_or_as_per_dpr}}
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form2.status_of_baseline_survey.label}}
+                                                {{form2.status_of_baseline_survey}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.status_board_meamber_identification.label}}
+                                                {{form2.status_board_meamber_identification}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.is_woman_centric.label}}
+                                                {{form2.is_woman_centric}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form2.registration_act.label}}
+                                                {{form2.registration_act}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.no_of_farmer_mobilized.label}}
+                                                {{form2.no_of_farmer_mobilized}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.no_of_share_member.label}}
+                                                {{form2.no_of_share_member}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form2.total_equity_amount.label}}
+                                                {{form2.total_equity_amount}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.register_on_enam.label}}
+                                                {{form2.register_on_enam}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.name_of_mandi.label}}
+                                                {{form2.name_of_mandi}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form2.additional_services_proposed_by_fpo.label}}
+                                                {{form2.additional_services_proposed_by_fpo}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.fig_creation_remarks.label}}
+                                                {{form2.fig_creation_remarks}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form2.date_of_incorporation.label}}
+                                                {{form2.date_of_incorporation}}
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row btn_hide" hidden>
+                                            <div class="col-12">
+                                                <button type="submit" class="btn btn-primary" name="submit"
+                                                        value="Submit">Submit
+                                                </button>
+                                            </div>
+                                        </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /jQuery Validation -->
+                </div>
+                </div>
+        </section>
+        <!-- /Validation -->
+
+    </div>
+</div>
+</div>
+
+{% endblock %}
+{% block js %}
+
+<script src="/{% static 'app-assets/vendors/js/forms/select/select2.full.min.js' %}"></script>
+<script src="/{% static 'app-assets/vendors/js/forms/validation/jquery.validate.min.js' %}"></script>
+<script src="/{% static 'app-assets/vendors/js/pickers/flatpickr/flatpickr.min.js' %}"></script>
+<script src="/{% static 'app-assets/js/scripts/forms/form-validation.js' %}"></script>
+<script>
+
+
+<!--    $('.insert').click(function() {-->
+<!--        var email=$('#account_details input').val()-->
+<!--        var form=$("#account_details").serialize();-->
+<!--       alert(email);-->
+<!--       console.log(form);-->
+<!--    });-->
+
+</script>
+<!--<script>-->
+<!--$('.add_fpo').click(function() {-->
+<!--    console.log('asd');-->
+<!--  document.getElementById("#myForm").submit();-->
+<!--    });-->
+<!--</script>-->
+<script>
+
+$(".edit-fpo :input").prop('disabled', true);
+$('.edit_fpo').click(function() {
+$(".edit-fpo :input").prop('disabled', false);
+$("div").removeAttr("hidden");
+change_heading.innerText = "Update FPO";
+change_list.innerText = "FPO edit";
+});
+
+</script>
+{% endblock js %}

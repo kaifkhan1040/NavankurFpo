@@ -1,0 +1,420 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block style %}
+
+
+    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/css/editors/quill/katex.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/css/editors/quill/monokai-sublime.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/css/editors/quill/quill.snow.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/css/forms/select/select2.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/css/pickers/flatpickr/flatpickr.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/css/extensions/dragula.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/core/menu/menu-types/vertical-menu.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/plugins/forms/form-quill-editor.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/plugins/forms/pickers/form-flat-pickr.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/plugins/extensions/ext-component-toastr.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/plugins/forms/form-validation.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/pages/app-todo.css' %}">
+{% endblock style %}
+<!-- BEGIN: Content-->
+{% block content %}
+
+
+    <!-- BEGIN: Content-->
+
+        <div class="content-area-wrapper container-fluid p-0 email_tabbing">
+            <div class="sidebar-left">
+                <div class="sidebar">
+                    <div class="container">
+                        <div class="row text-center">
+                            <div class="col-12">
+                               <button type="button" class="btn btn-md btn-primary my-1 px-5 w-100">Certificate</button> 
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="sidebar-content todo-sidebar">
+                        <ul class="nav nav-pills nav-left flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="stacked-pill-1" data-bs-toggle="pill" href="#vertical-pill-1" aria-expanded="true">
+                                    <span class="pe-2"><i data-feather="file-text" class="me-1 font-medium-4"></i>Certificate 1</span>     
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="stacked-pill-2" data-bs-toggle="pill" href="#vertical-pill-2" aria-expanded="false">
+                                   <span class="pe-2"><i data-feather="file-text" class="me-1 font-medium-4"></i>Certificate 2</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="stacked-pill-3" data-bs-toggle="pill" href="#vertical-pill-3" aria-expanded="false">
+                                   <span class="pe-2"><i data-feather="file-text" class="me-1 font-medium-4"></i>Certificate 3</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="stacked-pill-4" data-bs-toggle="pill" href="#vertical-pill-4" aria-expanded="false">
+                                   <span class="pe-2"><i data-feather="file-text" class="me-1 font-medium-4"></i>Certificate 4</span>
+                                </a>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    <div class="container">
+                            <div class="row">
+                                <div class="img_box">
+                                    <img src="{% static 'app-assets/images/pages/error.svg' %}" class="img-fluid d-none d-md-block" alt="demand img" />
+                                </div>  
+                            </div>
+                        </div>
+                </div> 
+            </div>
+            <div class="content-right">
+                <div class="content-wrapper container-fluid p-0">
+                    <div class="content-header row">
+                    </div>
+                    <div class="content-body">
+                        <div class="body-content-overlay"></div>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="vertical-pill-1" aria-labelledby="stacked-pill-1" aria-expanded="true">
+                                <div class="main_contentbox">
+                                    <div class="d-flex justify-content-between">
+                                        <h5>Example Description Of The Message</h5> 
+                                    <span>
+                                        <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Designer">
+                                            <i data-feather="codepen" class="me-1 font-medium-4"></i>
+                                        </a>
+                                        <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Preview">
+                                            <i data-feather="eye" class="me-1 font-medium-4"></i>
+                                        </a>
+                                    </span>
+                                </div> 
+                                <p>Example Description Of The Message Example Description Of The Message</p> 
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="vertical-pill-2" role="tabpanel" aria-labelledby="stacked-pill-2" aria-expanded="false">
+                                <div class="main_contentbox">
+                                    <div class="d-flex justify-content-between">
+                                        <h5 class="pt-2">Example Description Of The Message</h5> 
+                                        <span>
+                                        <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Designer">
+                                            <i data-feather="codepen" class="me-1 font-medium-4"></i>
+                                        </a>
+                                        <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Preview">
+                                            <i data-feather="eye" class="me-1 font-medium-4"></i>
+                                        </a>
+                                    </span>
+                                    </div>
+                                    <p>Example Description Of The Message Example Description Of The Message</p> 
+                                </div>
+                                <div class="d-flex justify-content-between pt-2">
+                                    <h5>Example Description Of The Message</h5> 
+                                    <span>
+                                        <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Designer">
+                                            <i data-feather="codepen" class="me-1 font-medium-4"></i>
+                                        </a>
+                                        <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Preview">
+                                            <i data-feather="eye" class="me-1 font-medium-4"></i>
+                                        </a>
+                                    </span>
+                                </div> 
+                                <p>Example Description Of The Message Example Description Of The Message</p>
+                            </div>
+                            <div class="tab-pane" id="vertical-pill-3" role="tabpanel" aria-labelledby="stacked-pill-3" aria-expanded="false">
+                                <div class="main_contentbox">
+                                    <div class="d-flex justify-content-between pt-2">
+                                        <h5>Example Description Of The Message</h5> 
+                                        <span>
+                                            <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Designer">
+                                                <i data-feather="codepen" class="me-1 font-medium-4"></i>
+                                            </a>
+                                            <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Preview">
+                                                <i data-feather="eye" class="me-1 font-medium-4"></i>
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <p>Example Description Of The Message Example Description Of The Message</p> 
+                                </div>
+                                <div class="d-flex justify-content-between pt-2">
+                                    <h5>Example Description Of The Message</h5> 
+                                    <span>
+                                        <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Designer">
+                                            <i data-feather="codepen" class="me-1 font-medium-4"></i>
+                                        </a>
+                                        <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Preview">
+                                            <i data-feather="eye" class="me-1 font-medium-4"></i>
+                                        </a>
+                                    </span>
+                                </div> 
+                                <p>Example Description Of The Message Example Description Of The Message</p>
+                                <div class="main_contentbox">
+                                    <div class="d-flex justify-content-between pt-2">
+                                        <h5>Example Description Of The Message</h5> 
+                                        <span>
+                                            <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Designer">
+                                                <i data-feather="codepen" class="me-1 font-medium-4"></i>
+                                            </a>
+                                            <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Preview">
+                                                <i data-feather="eye" class="me-1 font-medium-4"></i>
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <p>Example Description Of The Message Example Description Of The Message</p> 
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="vertical-pill-4" role="tabpanel" aria-labelledby="stacked-pill-4" aria-expanded="false">
+                                <div class="main_contentbox">
+                                    <div class="d-flex justify-content-between pt-2">
+                                        <h5>Example Description Of The Message</h5> 
+                                        <span>
+                                            <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Designer">
+                                                <i data-feather="codepen" class="me-1 font-medium-4"></i>
+                                            </a>
+                                            <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Preview">
+                                                <i data-feather="eye" class="me-1 font-medium-4"></i>
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <p>Example Description Of The Message Example Description Of The Message</p> 
+                                </div>
+                                <div class="d-flex justify-content-between pt-2">
+                                    <h5>Example Description Of The Message</h5> 
+                                    <span>
+                                        <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Designer">
+                                            <i data-feather="codepen" class="me-1 font-medium-4"></i>
+                                        </a>
+                                        <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Preview">
+                                            <i data-feather="eye" class="me-1 font-medium-4"></i>
+                                        </a>
+                                    </span>
+                                </div> 
+                                <p>Example Description Of The Message Example Description Of The Message</p>
+                                <div class="main_contentbox">
+                                    <div class="d-flex justify-content-between pt-2">
+                                        <h5>Example Description Of The Message</h5> 
+                                        <span>
+                                        <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Designer">
+                                            <i data-feather="codepen" class="me-1 font-medium-4"></i>
+                                        </a>
+                                        <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Preview">
+                                            <i data-feather="eye" class="me-1 font-medium-4"></i>
+                                        </a>
+                                    </span>
+                                    </div>
+                                    <p>Example Description Of The Message Example Description Of The Message</p> 
+                                </div>
+                                <div class="main_contentbox">
+                                    <div class="d-flex justify-content-between pt-2">
+                                        <h5>Example Description Of The Message</h5> 
+                                        <span>
+                                        <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Designer">
+                                            <i data-feather="codepen" class="me-1 font-medium-4"></i>
+                                        </a>
+                                        <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Preview">
+                                            <i data-feather="eye" class="me-1 font-medium-4"></i>
+                                        </a>
+                                    </span>
+                                    </div>
+                                    <p>Example Description Of The Message Example Description Of The Message</p> 
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="vertical-pill-5" role="tabpanel" aria-labelledby="stacked-pill-5" aria-expanded="false">
+                                <div class="main_contentbox">
+                                    <div class="d-flex justify-content-between pt-2">
+                                        <h5>Example Description Of The Message</h5> 
+                                        <span>
+                                        <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Designer">
+                                            <i data-feather="codepen" class="me-1 font-medium-4"></i>
+                                        </a>
+                                        <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Preview">
+                                            <i data-feather="eye" class="me-1 font-medium-4"></i>
+                                        </a>
+                                    </span>
+                                    </div>
+                                    <p>Example Description Of The Message Example Description Of The Message</p> 
+                                </div>
+                                <div class="d-flex justify-content-between pt-2">
+                                    <h5>Example Description Of The Message</h5> 
+                                    <span>
+                                        <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Designer">
+                                            <i data-feather="codepen" class="me-1 font-medium-4"></i>
+                                        </a>
+                                        <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Preview">
+                                            <i data-feather="eye" class="me-1 font-medium-4"></i>
+                                        </a>
+                                    </span>
+                                </div> 
+                                <p>Example Description Of The Message Example Description Of The Message</p>
+                                <div class="main_contentbox">
+                                    <div class="d-flex justify-content-between pt-2">
+                                        <h5>Example Description Of The Message</h5> 
+                                        <span>
+                                            <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Designer">
+                                                <i data-feather="codepen" class="me-1 font-medium-4"></i>
+                                            </a>
+                                            <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Preview">
+                                                <i data-feather="eye" class="me-1 font-medium-4"></i>
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <p>Example Description Of The Message Example Description Of The Message</p> 
+                                </div>
+                                <div class="main_contentbox">
+                                    <div class="d-flex justify-content-between pt-2">
+                                        <h5>Example Description Of The Message</h5> 
+                                        <span>
+                                            <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Designer">
+                                                <i data-feather="codepen" class="me-1 font-medium-4"></i>
+                                            </a>
+                                            <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Preview">
+                                                <i data-feather="eye" class="me-1 font-medium-4"></i>
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <p>Example Description Of The Message Example Description Of The Message</p> 
+                                </div>
+                                <div class="main_contentbox">
+                                    <div class="d-flex justify-content-between pt-2">
+                                        <h5>Example Description Of The Message</h5> 
+                                        <span>
+                                            <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Designer">
+                                                <i data-feather="codepen" class="me-1 font-medium-4"></i>
+                                            </a>
+                                            <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Preview">
+                                                <i data-feather="eye" class="me-1 font-medium-4"></i>
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <p>Example Description Of The Message Example Description Of The Message</p> 
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="vertical-pill-6" role="tabpanel" aria-labelledby="stacked-pill-6" aria-expanded="false">
+                                <div class="main_contentbox">
+                                    <div class="d-flex justify-content-between pt-2">
+                                        <h5>Example Description Of The Message</h5> 
+                                        <span>
+                                            <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Designer">
+                                                <i data-feather="codepen" class="me-1 font-medium-4"></i>
+                                            </a>
+                                            <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Preview">
+                                                <i data-feather="eye" class="me-1 font-medium-4"></i>
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <p>Example Description Of The Message Example Description Of The Message</p> 
+                                </div>
+                                <div class="d-flex justify-content-between pt-2">
+                                    <h5>Example Description Of The Message</h5> 
+                                    <span>
+                                        <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Designer">
+                                            <i data-feather="codepen" class="me-1 font-medium-4"></i>
+                                        </a>
+                                        <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Preview">
+                                            <i data-feather="eye" class="me-1 font-medium-4"></i>
+                                        </a>
+                                    </span>
+                                </div> 
+                                <p>Example Description Of The Message Example Description Of The Message</p>
+                                <div class="main_contentbox">
+                                    <div class="d-flex justify-content-between pt-2">
+                                        <h5>Example Description Of The Message</h5> 
+                                        <span>
+                                            <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Designer">
+                                                <i data-feather="codepen" class="me-1 font-medium-4"></i>
+                                            </a>
+                                            <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Preview">
+                                                <i data-feather="eye" class="me-1 font-medium-4"></i>
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <p>Example Description Of The Message Example Description Of The Message</p> 
+                                </div>
+                                <div class="main_contentbox">
+                                    <div class="d-flex justify-content-between pt-2">
+                                        <h5>Example Description Of The Message</h5> 
+                                        <span>
+                                            <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Designer">
+                                                <i data-feather="codepen" class="me-1 font-medium-4"></i>
+                                            </a>
+                                            <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Preview">
+                                                <i data-feather="eye" class="me-1 font-medium-4"></i>
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <p>Example Description Of The Message Example Description Of The Message</p> 
+                                </div>
+                                <div class="main_contentbox">
+                                    <div class="d-flex justify-content-between pt-2">
+                                        <h5>Example Description Of The Message</h5> 
+                                        <span>
+                                            <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Designer">
+                                                <i data-feather="codepen" class="me-1 font-medium-4"></i>
+                                            </a>
+                                            <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Preview">
+                                                <i data-feather="eye" class="me-1 font-medium-4"></i>
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <p>Example Description Of The Message Example Description Of The Message</p> 
+                                </div>
+                                <div class="main_contentbox">
+                                    <div class="d-flex justify-content-between pt-2">
+                                        <h5>Example Description Of The Message</h5> 
+                                        <span>
+                                            <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Designer">
+                                                <i data-feather="codepen" class="me-1 font-medium-4"></i>
+                                            </a>
+                                            <a data-bs-toggle="tooltip" data-bs-placement="bottom" title="Preview">
+                                                <i data-feather="eye" class="me-1 font-medium-4"></i>
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <p>Example Description Of The Message Example Description Of The Message</p> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- END: Content-->
+{% endblock  %}
+
+{% block js %}
+    <!-- BEGIN: Vendor JS-->
+<!--    <script src="{% static 'app-assets/vendors/js/vendors.min.js' %}"></script>-->
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="{% static 'app-assets/vendors/js/editors/quill/katex.min.js' %}"></script>
+    <script src="{% static 'app-assets/vendors/js/editors/quill/highlight.min.js' %}"></script>
+    <script src="{% static 'app-assets/vendors/js/editors/quill/quill.min.js' %}"></script>
+    <script src="{% static 'app-assets/vendors/js/forms/select/select2.full.min.js' %}"></script>
+    <script src="{% static 'app-assets/vendors/js/pickers/flatpickr/flatpickr.min.js' %}"></script>
+    <script src="{% static 'app-assets/vendors/js/extensions/dragula.min.js' %}"></script>
+    <script src="{% static 'app-assets/vendors/js/forms/validation/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'app-assets/vendors/js/extensions/toastr.min.js' %}"></script>
+    <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="{% static 'app-assets/js/core/app-menu.js' %}"></script>
+    <script src="{% static 'app-assets/js/core/app.js' %}"></script>
+    <!-- END: Theme JS-->
+
+    <!-- BEGIN: Page JS-->
+    <script src="{% static 'app-assets/js/scripts/pages/app-todo.js' %}"></script>
+    <!-- END: Page JS-->
+
+    <script>
+        $(window).on('load', function() {
+            if (feather) {
+                feather.replace({
+                    width: 14,
+                    height: 14
+                });
+            }
+        })
+    </script>
+
+{% endblock js %}

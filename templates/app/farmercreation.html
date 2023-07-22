@@ -1,0 +1,820 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block style %}
+
+    <link rel="stylesheet" type="text/css" href="/{% static 'app-assets/vendors/css/forms/select/select2.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="/{% static 'app-assets/vendors/css/pickers/flatpickr/flatpickr.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="/{% static 'app-assets/css/plugins/forms/form-validation.css' %}">
+    <link rel="stylesheet" type="text/css" href="/{% static 'app-assets/css/plugins/forms/pickers/form-flat-pickr.css' %}">
+{% endblock style %}
+<!-- BEGIN: Content-->
+{% block content %}
+
+    <!-- BEGIN: Content-->
+<!--    <div class="app-content content ">-->
+<!--        <div class="content-overlay"></div>-->
+<!--        <div class="header-navbar-shadow"></div>-->
+<!--        <div class="content-wrapper container-xxl p-0">-->
+<!--            <div class="content-header row">-->
+<!--                <div class="content-header-left col-md-9 col-12 mb-2">-->
+<!--                    <div class="row breadcrumbs-top">-->
+<!--                        <div class="col-12">-->
+<!--                            <h2 class="content-header-title float-left mb-0">FPO Registration</h2>-->
+
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="content-header-right text-md-right col-md-3 col-12 d-md-block d-none">-->
+<!--                    <div class="form-group breadcrumb-right">-->
+<!--                        <div class="dropdown">-->
+<!--                            <button class="btn-icon btn btn-primary btn-round btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i data-feather="grid"></i></button>-->
+<!--                            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="app-todo.html"><i class="mr-1" data-feather="check-square"></i><span class="align-middle">Todo</span></a><a class="dropdown-item" href="app-chat.html"><i class="mr-1" data-feather="message-square"></i><span class="align-middle">Chat</span></a><a class="dropdown-item" href="app-email.html"><i class="mr-1" data-feather="mail"></i><span class="align-middle">Email</span></a><a class="dropdown-item" href="app-calendar.html"><i class="mr-1" data-feather="calendar"></i><span class="align-middle">Calendar</span></a></div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="content-body">-->
+<!--                &lt;!&ndash; Validation &ndash;&gt;-->
+<!--                <section class="bs-validation">-->
+<!--                    <div class="row">-->
+<!--                        &lt;!&ndash; Bootstrap Validation &ndash;&gt;-->
+<!--                        <div class="col-md-12 col-12">-->
+
+<!--                            <div class="card">-->
+<!--                                <div class="card-header">-->
+<!--                                    <h4 class="card-title">Basic Details</h4>-->
+<!--                                </div>-->
+<!--                                <div class="card-body">-->
+<!--                                    <form class="needs-validation" id="myForm" novalidate method="post" action="/admin/createfpo/">-->
+
+<!--                                            <div class="row">-->
+<!--                                                <div class="col-md-4">-->
+<!--                                                    <div class="form-group">-->
+<!--                                                        <label class="form-label" for="basic-addon-name">Name</label>-->
+<!--                                                            {{form.first_name}}-->
+<!--&lt;!&ndash;                                                        <input type="text" id="basic-addon-name" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="basic-addon-name" required />&ndash;&gt;-->
+<!--                                                        <div class="valid-feedback">Looks good!</div>-->
+<!--                                                        <div class="invalid-feedback">Please enter your name.</div>-->
+<!--                                                    </div>-->
+
+<!--                                                </div>-->
+<!--                                                <div class="col-md-4">-->
+<!--                                                    <div class="form-group">-->
+<!--                                                        <label class="form-label" for="basic-default-email1">Email</label>-->
+<!--&lt;!&ndash;                                                        <input type="email" id="basic-default-email1" class="form-control" placeholder="john.doe@email.com" aria-label="john.doe@email.com" required />&ndash;&gt;-->
+<!--                                                        {{form.email}}-->
+<!--                                                        <div class="valid-feedback">Looks good!</div>-->
+<!--                                                        <div class="invalid-feedback">Please enter a valid email</div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="col-md-4">-->
+<!--                                                    <div class="form-group">-->
+<!--&lt;!&ndash;                                                        <label class="form-label" for="basic-addon-name">Name</label>&ndash;&gt;-->
+<!--                                                            {{form.company_name.label}}-->
+<!--                                                            {{form.company_name}}-->
+<!--&lt;!&ndash;                                                        <input type="text" id="basic-addon-name" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="basic-addon-name" required />&ndash;&gt;-->
+<!--                                                        <div class="valid-feedback">Looks good!</div>-->
+<!--                                                        <div class="invalid-feedback">Please enter your name.</div>-->
+<!--                                                    </div>-->
+
+<!--                                                </div>-->
+
+<!--                                            </div>-->
+
+<!--                                        <div class="row">-->
+
+<!--                                                <div class="col-md-4">-->
+<!--                                                    <div class="form-group">-->
+<!--&lt;!&ndash;                                                        <label class="form-label" for="basic-default-email1">Email</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                        <input type="email" id="basic-default-email1" class="form-control" placeholder="john.doe@email.com" aria-label="john.doe@email.com" required />&ndash;&gt;-->
+<!--                                                        {{form.implementing_agency.label}}-->
+<!--                                                        {{form.implementing_agency}}-->
+<!--                                                        <div class="valid-feedback">Looks good!</div>-->
+<!--                                                        <div class="invalid-feedback">Please enter a implementing agency</div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="col-md-4">-->
+<!--                                                    <div class="form-group">-->
+<!--&lt;!&ndash;                                                        <label class="form-label" for="basic-default-password1">Password</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                        <input type="password" id="basic-default-password1" class="form-control" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" required />&ndash;&gt;-->
+<!--                                                            {% load widget_tweaks %}-->
+<!--                                                            {{form.password1.label}}-->
+<!--                                                            {% render_field form.password1 class+="form-control" %}-->
+
+<!--                                                        <div class="valid-feedback">Looks good!</div>-->
+<!--                                                        <div class="invalid-feedback">Please enter your password.</div>-->
+<!--                                                    </div>-->
+
+<!--                                                </div>-->
+<!--                                                <div class="col-md-4">-->
+<!--                                                    <div class="form-group">-->
+<!--                                                        {{form.password2.label}}:-->
+
+<!--                                                            {% render_field form.password2 class+="form-control" %}-->
+<!--                                                        <div class="valid-feedback">Looks good!</div>-->
+<!--                                                        <div class="invalid-feedback">Please enter a password</div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+
+<!--                                            </div>-->
+<!--&lt;!&ndash;                                        start address details&ndash;&gt;-->
+<!--                                        <div>-->
+<!--                                            <h3>Address Details</h3>-->
+<!--                                        </div>-->
+<!--                                        <div class="row">-->
+<!--                                                <div class="col-md-4">-->
+<!--                                                    <div class="form-group">-->
+<!--&lt;!&ndash;                                                        <label class="form-label" for="basic-default-email1">Email</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                        <input type="email" id="basic-default-email1" class="form-control" placeholder="john.doe@email.com" aria-label="john.doe@email.com" required />&ndash;&gt;-->
+<!--                                                        {{form.state_category.label}}-->
+<!--                                                        {{form.state_category}}-->
+<!--                                                        <div class="valid-feedback">Looks good!</div>-->
+<!--                                                        <div class="invalid-feedback">Please enter a state category e.g: hilly</div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="col-md-4">-->
+<!--                                                    <div class="form-group">-->
+<!--&lt;!&ndash;                                                        <label class="form-label" for="basic-default-email1">Email</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                        <input type="email" id="basic-default-email1" class="form-control" placeholder="john.doe@email.com" aria-label="john.doe@email.com" required />&ndash;&gt;-->
+<!--                                                        {{form.state.label}}-->
+<!--                                                        {{form.state}}-->
+<!--                                                        <div class="valid-feedback">Looks good!</div>-->
+<!--                                                        <div class="invalid-feedback">Please enter a state category e.g: hilly</div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="col-md-4">-->
+<!--                                                    <div class="form-group">-->
+<!--&lt;!&ndash;                                                        <label class="form-label" for="basic-default-email1">Email</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                        <input type="email" id="basic-default-email1" class="form-control" placeholder="john.doe@email.com" aria-label="john.doe@email.com" required />&ndash;&gt;-->
+<!--                                                        {{form.district.label}}-->
+<!--                                                        {{form.district}}-->
+<!--                                                        <div class="valid-feedback">Looks good!</div>-->
+<!--                                                        <div class="invalid-feedback">Please enter a state category e.g: hilly</div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                        </div>-->
+<!--                                        <div class="row">-->
+<!--                                                <div class="col-md-4">-->
+<!--                                                    <div class="form-group">-->
+<!--&lt;!&ndash;                                                        <label class="form-label" for="basic-default-email1">Email</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                        <input type="email" id="basic-default-email1" class="form-control" placeholder="john.doe@email.com" aria-label="john.doe@email.com" required />&ndash;&gt;-->
+<!--                                                        {{form.block.label}}-->
+<!--                                                        {{form.block}}-->
+<!--                                                        <div class="valid-feedback">Looks good!</div>-->
+<!--                                                        <div class="invalid-feedback">Please enter a state category e.g: hilly</div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="col-md-4">-->
+<!--                                                    <div class="form-group">-->
+<!--&lt;!&ndash;                                                        <label class="form-label" for="basic-default-email1">Email</label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                        <input type="email" id="basic-default-email1" class="form-control" placeholder="john.doe@email.com" aria-label="john.doe@email.com" required />&ndash;&gt;-->
+<!--                                                        {{form.full_address.label}}-->
+<!--                                                        {{form.full_address}}-->
+<!--                                                        <div class="valid-feedback">Looks good!</div>-->
+<!--                                                        <div class="invalid-feedback">Please enter a state category e.g: hilly</div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+
+<!--                                        </div>-->
+
+
+<!--                                        <div class="row">-->
+<!--                                            <div class="col-12">-->
+<!--                                                <button type="submit" class="btn btn-primary add_fpo">Submit</button>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </form>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        </div>-->
+<!--                </section>-->
+<!--                &lt;!&ndash; /Validation &ndash;&gt;-->
+
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="sidenav-overlay"></div>-->
+<!--    <div class="drag-target"></div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <!--js validation-->
+   <!-- BEGIN: Content-->
+    <div class="app-content content ">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper container-xxl p-0">
+            <div class="content-header row">
+                <div class="content-header-left col-md-9 col-12 mb-2">
+                    <div class="row breadcrumbs-top">
+                        <div class="col-12">
+                            <h2 class="content-header-title float-left mb-0">Farmer registration</h2>
+                            <div class="breadcrumb-wrapper">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="{% url 'app:home' %}">Home</a>
+                                    </li>
+                                    <li class="breadcrumb-item">Forms
+                                    </li>
+                                    <li class="breadcrumb-item active">Farmer Registration
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-header-right text-md-right col-md-3 col-12 d-md-block d-none">
+                    <div class="form-group breadcrumb-right">
+<!--                        <div class="dropdown">-->
+<!--                            <button class="btn-icon btn btn-primary btn-round btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i data-feather="grid"></i></button>-->
+<!--                            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="app-todo.html"><i class="mr-1" data-feather="check-square"></i><span class="align-middle">Todo</span></a><a class="dropdown-item" href="app-chat.html"><i class="mr-1" data-feather="message-square"></i><span class="align-middle">Chat</span></a><a class="dropdown-item" href="app-email.html"><i class="mr-1" data-feather="mail"></i><span class="align-middle">Email</span></a><a class="dropdown-item" href="app-calendar.html"><i class="mr-1" data-feather="calendar"></i><span class="align-middle">Calendar</span></a></div>-->
+<!--                        </div>-->
+                    </div>
+                </div>
+            </div>
+            <div class="content-body">
+                <!-- Validation -->
+                <section class="bs-validation">
+                    <div class="row">
+                        <div class="col-md-12 col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Basic Details</h4>
+                                </div>
+                                <div class="card-body">
+                                    <form id="jquery-val-form" method="post">{% csrf_token %}
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+<!--                                            <label class="form-label" for="basic-default-name">Name</label>-->
+<!--                                            <input type="text" class="form-control" id="basic-default-name" name="basic-default-name" placeholder="John Doe" />-->
+                                            {{form.si_no_of_share_holder.label}}
+                                            {{form.si_no_of_share_holder}}
+                                        </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+<!--                                                        <label class="form-label" for="basic-default-email1">Email</label>-->
+<!--                                                        <input type="email" id="basic-default-email1" class="form-control" placeholder="john.doe@email.com" aria-label="john.doe@email.com" required />-->
+                                                        {{form.share_holder_name.label}}
+                                                        {{form.share_holder_name}}
+                                                   </div>
+                                            </div>
+                                            <div class="col-md-4">
+
+                                                    <div class="form-group">
+<!--                                                        <label class="form-label" for="basic-addon-name">Name</label>-->
+
+                                                {{form.gender.label}}
+                                                {{form.gender}}
+<!--                                                        <input type="text" id="basic-addon-name" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="basic-addon-name" required />-->
+
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form.farmer_name.label}}
+                                                {{form.farmer_name}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.fig_name.label}}
+                                                {{form.fig_name}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.hh_name.label}}
+                                                {{form.hh_name}}
+                                            </div>
+                                        </div>
+                                        <div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                            {{form.father_and_husband_name.label}}
+                                            {{form.father_and_husband_name}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.age.label}}
+                                                {{form.age}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.category.label}}
+                                                {{form.category}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form.mobile_number.label}}
+                                                {{form.mobile_number}}
+                                            </div>
+                                            <div class="col-md-4">
+                                            {{form.dob_of_farmer.label}}
+                                            {{form.dob_of_farmer}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.social_category.label}}
+                                                {{form.social_category}}
+                                            </div>
+                                        </div>
+                                        <div>
+                                        <h3>Address Details</h3>
+                                            <hr>
+                                            </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form.gram_panchayat.label}}
+                                                {{form.gram_panchayat}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.state.label}}
+                                                {{form.state}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.district.label}}
+                                                {{form.district}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form.block.label}}
+                                                {{form.block}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.village.label}}
+                                                {{form.village}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.pg_name.label}}
+                                                {{form.pg_name}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form.hamlet.label}}
+                                                {{form.hamlet}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.poly_or_shed_house.label}}
+                                                {{form.poly_or_shed_house}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.house_type.label}}
+                                                {{form.house_type}}
+                                            </div>
+                                        </div>
+                                        <div >
+                                            <h3>FIG</h3>
+                                            <hr>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form.member_of_fig.label}}
+                                                {{form.member_of_fig}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.name_of_the_fig.label}}
+                                                {{form.name_of_the_fig}}
+                                            </div>
+                                            <div class="col-md-4">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                            </div>
+                                            <div class="col-md-4">
+                                            </div>
+                                            <div class="col-md-4">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                            </div>
+                                            <div class="col-md-4">
+                                            </div>
+                                            <div class="col-md-4">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                            </div>
+<!--                                            <div class="col-md-4">-->
+<!--                                                {{form.issued_shared_capital.label}}-->
+<!--                                                {{form.issued_shared_capital}}-->
+<!--                                            </div>-->
+<!--                                            <div class="col-md-4">-->
+<!--                                                {{form.mca_docs.label}}-->
+<!--                                                {{form.mca_docs}}-->
+<!--                                            </div>-->
+                                        </div>
+                                        <div>
+                                        <h3>CROP</h3>
+                                            <hr>
+                                            </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form.kharif_crop.label}}
+                                                {{form.kharif_crop}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.robi_crop.label}}
+                                                {{form.robi_crop}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.zayed_crop.label}}
+                                                {{form.zayed_crop}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                            </div>
+                                            <div class="col-md-4">
+                                            </div>
+                                            <div class="col-md-4">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                            </div>
+                                            <div class="col-md-4">
+
+                                            </div>
+                                            <div class="col-md-4">
+
+                                            </div>
+                                        </div>
+                                            <div>
+                                            <h3>MONTH</h3>
+                                            <hr>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form.sowing_month.label}}
+                                                {{form.sowing_month}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.marketing_month.label}}
+                                                {{form.marketing_month}}
+                                            </div>
+                                            <div class="col-md-4">
+                                            </div>
+                                        </div>
+                                            <div>
+                                            <h3>Vehicle Details</h3>
+                                            <hr>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form.any_commerical_vehicle.label}}
+                                                {{form.any_commerical_vehicle}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.onwed_vehicle.label}}
+                                                {{form.onwed_vehicle}}
+                                            </div>
+                                            <div class="col-md-4">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                            </div>
+                                            <div class="col-md-4">
+                                            </div>
+                                            <div class="col-md-4">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                            </div>
+                                            <div class="col-md-4">
+
+                                            </div>
+                                            <div class="col-md-4">
+
+                                            </div>
+                                        </div>
+
+                                            <div>
+                                            <h3>Animals Details</h3>
+                                            <hr>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form.pig_number.label}}
+                                                {{form.pig_number}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.cow_number.label}}
+                                                {{form.cow_number}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.buffalo_number.label}}
+                                                {{form.buffalo_number}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                            </div>
+                                        </div>
+
+                                            <div>
+                                            <h3>Share</h3>
+                                            <hr>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form.year_of_share_issued.label}}
+                                                {{form.year_of_share_issued}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.generate_share_certificate_number.label}}
+                                                {{form.generate_share_certificate_number}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.distinctive_total_number_of_share.label}}
+                                                {{form.distinctive_total_number_of_share}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form.total_capital_amount_deposited.label}}
+                                                {{form.total_capital_amount_deposited}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.nominee.label}}
+                                                {{form.nominee}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.relationship_with_nominee.label}}
+                                                {{form.relationship_with_nominee}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form.address_of_the_nominee.label}}
+                                                {{form.address_of_the_nominee}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.ivrs_or_other_alerts.label}}
+                                                {{form.ivrs_or_other_alerts}}
+                                            </div>
+                                            <div class="col-md-4">
+                                            </div>
+                                        </div>
+
+                                            <div>
+                                            <h3>Land</h3>
+                                            <hr>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form.total_land.label}}
+                                                {{form.total_land}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.land_record_details.label}}
+                                                {{form.land_record_details}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.upland_irrigated.label}}
+                                                {{form.upland_irrigated}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form.medium_upland_irrigated.label}}
+                                                {{form.medium_upland_irrigated}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.low_land_irrigated.label}}
+                                                {{form.low_land_irrigated}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.leased_land.label}}
+                                                {{form.leased_land}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form.leased_land_area.label}}
+                                                {{form.leased_land_area}}
+                                            </div>
+                                        </div>
+
+                                            <div>
+                                        <h3>Income</h3>
+                                            <hr>
+                                            </div>
+                                             <div class="row">
+                                            <div class="col-md-4">
+                                                {{form.annual_income.label}}
+                                                {{form.annual_income}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.livestock_income.label}}
+                                                {{form.livestock_income}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.other_income.label}}
+                                                {{form.other_income}}
+                                            </div>
+                                        </div>
+
+                                            <div>
+                                        <h3>Documents</h3>
+                                            <hr>
+                                            </div>
+                                             <div class="row">
+                                            <div class="col-md-4">
+                                                {{form.aadhar_card_no.label}}
+                                                {{form.aadhar_card_no}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.bank_account_no.label}}
+                                                {{form.bank_account_no}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.aadhar_attached.label}}
+                                                {{form.aadhar_attached}}
+                                            </div>
+                                        </div>
+                                             <div class="row">
+                                            <div class="col-md-4">
+                                                {{form.pan_attached.label}}
+                                                {{form.pan_attached}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.bank_details_attached.label}}
+                                                {{form.bank_details_attached}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.land_records_attached.label}}
+                                                {{form.land_records_attached}}
+                                            </div>
+                                        </div>
+
+
+
+                                            <div>
+                                        <h3>Others Details</h3>
+                                            <hr>
+                                            </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form.bpl_status.label}}
+                                                {{form.bpl_status}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.have_you_received_aadhar_card_consent.label}}
+                                                {{form.have_you_received_aadhar_card_consent}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.number_of_family_member.label}}
+                                                {{form.number_of_family_member}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form.labour.label}}
+                                                {{form.labour}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.ntfp.label}}
+                                                {{form.ntfp}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.micro_enterprise.label}}
+                                                {{form.micro_enterprise}}
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form.member_of_cooperative_agriculture_societies.label}}
+                                                {{form.member_of_cooperative_agriculture_societies}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.names_of_agri_machinery_owner.label}}
+                                                {{form.names_of_agri_machinery_owner}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.name_of_market.label}}
+                                                {{form.name_of_market}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form.Livestock_activity.label}}
+                                                {{form.Livestock_activity}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.byp_number.label}}
+                                                {{form.byp_number}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.shed_type.label}}
+                                                {{form.shed_type}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form.vaccine_interval.label}}
+                                                {{form.vaccine_interval}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.tagging_status.label}}
+                                                {{form.tagging_status}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.face_value_of_share.label}}
+                                                {{form.face_value_of_share}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form.mambers_hip_amount_paid.label}}
+                                                {{form.mambers_hip_amount_paid}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.premium_amount_paid.label}}
+                                                {{form.premium_amount_paid}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.any_entrepreneural_activity.label}}
+                                                {{form.any_entrepreneural_activity}}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                {{form.packhouse_available.label}}
+                                                {{form.packhouse_available}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.drying_yard_available.label}}
+                                                {{form.drying_yard_available}}
+                                            </div>
+                                            <div class="col-md-4">
+                                                {{form.other_livelihood.label}}
+                                                {{form.other_livelihood}}
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <button type="submit" class="btn btn-primary" name="submit" value="Submit">Submit</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /jQuery Validation -->
+                    </div>
+                    </div>
+                </section>
+                <!-- /Validation -->
+
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}
+    {% block js %}
+
+    <script src="/{% static 'app-assets/vendors/js/forms/select/select2.full.min.js' %}"></script>
+    <script src="/{% static 'app-assets/vendors/js/forms/validation/jquery.validate.min.js' %}"></script>
+    <script src="/{% static 'app-assets/vendors/js/pickers/flatpickr/flatpickr.min.js' %}"></script>
+    <script src="/{% static 'app-assets/js/scripts/forms/form-validation.js' %}"></script>
+    <script>
+
+
+<!--    $('.insert').click(function() {-->
+<!--        var email=$('#account_details input').val()-->
+<!--        var form=$("#account_details").serialize();-->
+<!--       alert(email);-->
+<!--       console.log(form);-->
+<!--    });-->
+    </script>
+<!--<script>-->
+<!--$('.add_fpo').click(function() {-->
+<!--    console.log('asd');-->
+<!--  document.getElementById("#myForm").submit();-->
+<!--    });-->
+<!--</script>-->
+    {% endblock js %}

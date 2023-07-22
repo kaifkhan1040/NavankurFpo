@@ -1,0 +1,313 @@
+/*================================================================================
+	Item Name: Vuexy - Vuejs, HTML & Laravel Admin Dashboard Template
+	Version: 2.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+================================================================================
+
+NOTE:
+------
+PLACE HERE YOUR OWN SCSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
+WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+::placeholder {
+  color:#B9B9C3;
+}
+
+.form-control:disabled, .form-control[readonly] {
+    background-color: #ffffff;
+    opacity: 1;
+}
+
+.select2-container--default.select2-container--disabled .select2-selection--single {background-color:#fff;}
+
+
+
+.auth-wrapper .auth-bg {
+	/*background-color:#4F812B;*/
+	background:linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), #73b21a;
+}
+.login_form h2 {
+	color: #fff;
+    font-size: 32px;
+    font-family: 'Montserrat';
+}
+
+.btn-agribg {
+	border-color: #84C72B !important;
+    background-color: #84C72B !important;
+    color: #fff !important;
+}
+.info-text {
+	color:#E9E9E9;
+	font-size: 14px;
+}
+
+.info-text a {
+	color:#E9E9E9;
+	font-size: 16px;
+	text-decoration: underline;
+}
+.auth-login-form .form-check-input {background-color:#00000000;}
+
+.new-user {color:#FAC855;}
+.info-text a {text-decoration:none;}
+
+.login_form .form-check-input:checked {
+    background-color: #75a850;
+    border-color: #75a850;
+}
+
+.login-img{
+	max-width:700px;
+}
+.cust_icon {
+	font-style: normal;
+    font-size: 1.1rem!important;
+}
+
+.cust_icon img {
+	/*padding-right:1.1rem;*/
+}
+
+.fpo_tabbing .sidebar-left {background-color:#fff;}
+
+.email-application .app-action .action-left .form-check {
+	padding-left: 0;
+
+}
+
+.fpo-details {background-color:#fff;}
+.fpo-details .form-label {
+	font-size: 13px;
+    color: #525252;
+    font-weight: 600;
+    line-height: 15.85px;
+    padding-bottom: 13px;
+}
+
+.farmer-background img {
+	width:180px;
+	height:150px;
+	text-align: center;
+	padding-top:15px;
+	/*background-image: url("../../app-assets/images/svg/farmer-bg.svg");*/
+	/*background-size: cover;*/
+
+}
+.btn-box {padding-top:15px;}
+.fpo-details .info-text {
+	font-size:13px;padding-top:3px;}
+}
+#subscriberbox h1 {font-size:2.8rem;}
+#subscriberimg img {max-width:500px;}
+#authorityform .bs-stepper .bs-stepper-content {
+    padding: 0.1rem 0.1rem;
+}
+
+#authorityform .card {
+  box-shadow:none;
+}
+.app-action a {
+	color:#525252;
+}
+
+.email-application .content-area-wrapper .email-user-list {
+	height: calc( 100% - calc(3.49rem + 0rem))!important;
+  overflow-y: scroll!important;
+}
+.action-icon  {
+	color:#6e6b7b;
+}
+
+/* The Modal (background) */
+.previewmodal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  opacity: 1 !important;
+  max-width: 1200px;
+}
+
+/* Caption of Modal Image */
+.modal-caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 1200px;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1em;
+  margin-top: 32px;
+}
+
+/* Add Animation */
+.modal-content, .modal-caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-atransform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+
+.form-select:disable{
+background-color: #efefef;
+}
+
+
+
+.modal-close:hover,
+.modal-close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.bg-box-col {
+    width: auto;
+}
+#profileIcon .card-body {padding-left:0px;}
+
+.subscriberdetailform {cursor:pointer;}
+.nav-fill .nav-link {
+  border: 1px solid grey;
+}
+
+#subscribersformlist  {
+  box-shadow:0px 0px 0px;
+  margin-top: -15px;
+}
+
+#subscribersformlist .bs-stepper .bs-stepper-header .step {
+    margin-bottom: 0.95rem;
+    margin-top: 0.25rem;
+}
+
+#subscribersformlist .nav-tabs .nav-link.active {
+  color:#73b21a!important;
+  padding-left:0;
+  font-size:15px;
+}
+#subscribersformlist .nav-tabs .nav-link {
+  padding-left:0;
+  font-size:15px;
+  display: flex;
+    justify-content: flex-start;
+}
+
+#subscribersformlist .nav-tabs .nav-link:after {
+  background:#fff!important;
+}
+#subscribersformlist.tab-content {
+  margin-top:30px;
+}
+#subscribersformlist .nav-tabs .nav-item {width:30%;}
+
+.rightedit-icon {
+  float: right;
+  padding-top: 0.3rem;
+}
+.fpoheading {color:#73b21a;font-weight:600;}
+
+#imagemodal .modal-dialog {max-width:600px;}
+#authorityform .bs-stepper-header {
+  border-bottom: none;
+}
+.data-info {border:1px solid #ccc;}
+.table:not(.table-dark):not(.table-light) thead:not(.table-dark) th, .table:not(.table-dark):not(.table-light) tfoot:not(.table-dark) th {
+    background-color: #525252!important;
+    color: #fff!important;
+}
+
+.btn-box8 {padding-left:0px;}
+
+#subscriberdatatab {
+  box-shadow: 0px 0px 0px!important;
+}
+
+.email-application .content-area-wrapper .content-right .action-icon {
+  padding-right: 0.7rem;
+}
+
+.email-application .content-area-wrapper .content-right .action-icon:hover {
+  color:#73b21a;
+}
+
+.dbtn {
+  padding: 5px 0px 5px 5px;
+}
+#authsharecaptable {padding:20px;}
+.addbtn {margin-bottom:20px;}
+.authorizedsharedata {border: 1px solid #ccc;}
+
+.d_text {padding-left:15px;}
+.fpoheading a {color:#73b21a!important;}
+#authsharecaptable, #issuedsharecaptable {
+
+padding:
+20px
+
+;
+}
+.subicons {background-color: #73b21a;
+    color: #fff;
+    padding: 0px;
+    font-size: 15px;
+    border-radius: 3px;}
+#subscribersformlistbody .nav-item {font-size:15px!important;}
+#subscribersformlistbody .nav-link svg {
+  margin-right:0;
+}
+.dbtn {padding: 5px 2px 5px 5px;}
+
+#subscribersformlist i {font-size:18px!important;}
+#dsubscriber , #osubscriber {padding-top:25px;}
+
+@media(max-width:425px){
+	.brdr-line{display:none;}
+	.email-application .app-action .action-left .form-check {padding-left:0;}
+}
